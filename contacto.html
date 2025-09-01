@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Álvaro Prieto — Proyecto Integrado 2º Gráfica Interactiva" />
+  <meta name="description" content="Versi Web" />
+  <title>Versi — Contacto</title>
+
+  
+  <!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="media/favicon.svg">
+
+
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/mediaqueries.css" />
+  <script src="js/script.js" defer></script>
+
+
+</head>
+<body>
+
+  <!-- Overlay menú móvil -->
+  <div id="overlay" class="overlay" hidden></div>
+
+
+  <!-- ===== HEADER / NAV ===== -->
+
+  <header class="site-header" role="banner">
+    <div class="container header__bar">
+      <!-- Logo -->
+      <a href="index.html" class="logo-link" aria-label="Versi">
+        <img src="media/logoNav-Versi.svg" alt="Versi" class="logo-img" width="120" height="28" />
+      </a>
+
+
+      <!-- Nav desktop -->
+
+      <nav class="nav-desktop" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="personalizacion.html">Personalización</a></li>
+          <li><a href="zonaclubs.html">Zona Clubs</a></li>
+          <li><a href="error404.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+
+      <!-- Acciones -->
+
+      <div class="header__actions">
+        <a href="#" class="icon-link" aria-label="Mi cuenta" data-user-open aria-controls="user-login">
+        <img src="media/iconos/icono-usuario.svg" alt="" width="22" height="22" />
+        </a>
+
+
+        <!-- Activador del modal de cesta -->
+
+        <a href="#"
+           class="icon-link cart-trigger"
+           aria-label="Cesta"
+           aria-controls="cart-overlay"
+           data-cart-open>
+          <img src="media/iconos/icono-cesta.svg" alt="" width="22" height="22" />
+        </a>
+
+        <button class="icon-link btn-menu" id="btnMenuOpen"
+                aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menú">
+          <img src="media/iconos/icono-menu.svg" alt="" width="22" height="22" />
+        </button>
+      </div>
+    </div>
+    
+
+    <!-- Off-canvas móvil/tablet -->
+
+    <aside id="menu-mobile" class="menu-mobile" role="dialog" aria-modal="true" aria-label="Menú">
+      <div class="menu-mobile__head">
+        <a href="index.html" class="logo-link" aria-label="Versi">
+          <img src="media/logoNav-Versi.svg" alt="Versi" width="112" height="26" />
+        </a>
+        <button class="icon-link" id="btnMenuClose" aria-label="Cerrar menú">
+          <img src="media/iconos/icono-cerrar.svg" alt="" width="22" height="22" />
+        </button>
+      </div>
+
+      <nav class="menu-mobile__nav" aria-label="Navegación móvil">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="personalizacion.html">Personalización</a></li>
+          <li><a href="zonaclubs.html">Zona Clubs</a></li>
+          <li><a href="error404.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-mobile__extras">
+        <div class="menu-mobile__social" aria-label="Redes sociales">
+          <a href="#" class="icon-link" aria-label="Instagram">
+            <img src="media/iconos/icono-instagram.svg" alt="" width="24" height="24" />
+          </a>
+          <a href="#" class="icon-link" aria-label="X/Twitter">
+            <img src="media/iconos/icono-x.svg" alt="" width="24" height="24" />
+          </a>
+          <a href="#" class="icon-link" aria-label="TikTok">
+            <img src="media/iconos/icono-tiktok.svg" alt="" width="24" height="24" />
+          </a>
+        </div>
+      </div>
+    </aside>
+  </header>
+
+
+
+
+  <!-- ================= CONTENIDO ================= -->
+
+
+  <!-- PAGINA CONTACTO -->
+
+  <main id="main-content" tabindex="-1">
+
+
+
+<!-- ===== BANNER GENÉRICO HERO CONTACTO ===== -->
+
+<section class="page-hero page-hero--dark page-hero--overlay-dark">
+  <img class="page-hero__img" src="media/banner-contacto.jpg" alt="Equipo celebrando" />
+
+  <div class="container page-hero__content">
+    <h1 class="page-hero__title">Contacto</h1>
+    <p class="page-hero__subtitle">El primer paso hacia lo que tu club merece.</p>
+  </div>
+</section>
+
+
+
+<!-- ===== FORMULARIO DE CONTACTO ===== -->
+
+<section id="contacto" class="contact">
+  <div class="container">
+    <h2 class="contact__title">
+      <span>¿Buscas equipaciones que estén a la altura de tu club?</span><br>
+      <span class="accent">¡Contacta con nosotros!</span>
+    </h2>
+
+    <form class="contact__form" action="#" method="post" onsubmit="return false">
+      <div class="form-grid">
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" required />
+        </div>
+
+        <div class="field">
+          <label for="entidad">Entidad Deportiva</label>
+          <input id="entidad" name="entidad" type="text" required />
+        </div>
+
+        <div class="field field--full">
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="field field--full">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+        </div>
+      </div>
+
+      <label class="policy">
+        <input type="checkbox" required />
+        <span>He leído y acepto la <a href="privacidad.html" target="_blank" rel="noopener">Política de Privacidad</a></span>
+      </label>
+
+      <div class="contact__submit">
+        <button type="submit" class="btn-cta">Enviar Mensaje</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<!-- ===================== MAPA Y DATOS DE CONTACTO ===================== -->
+
+<section class="contact-location" id="contact-location">
+  <div class="contact-location__container">
+    <div class="contact-location__grid">
+      <div class="contact-location__details">
+        <h2 class="contact-location__title">Ubicación y datos de contacto</h2>
+
+        <div class="contact-location__block">
+          <h3 class="contact-location__subtitle">Dirección:</h3>
+          <p>
+            Carrer Montjuïc, 11<br>
+            08293 Collbató, Barcelona
+          </p>
+        </div>
+
+        <div class="contact-location__block">
+          <h3 class="contact-location__subtitle">Correo electrónico:</h3>
+          <p>
+            <a href="mailto:info@versisport.com">info@versisport.com</a><br>
+            <a href="mailto:clubesversi@versisport.com">clubesversi@versisport.com</a>
+          </p>
+        </div>
+      </div>
+
+
+      <!-- Mapa -->
+
+      <div class="contact-location__map">
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.1504257358374!2d1.8142538753157962!3d41.565988871277725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4603e0e9f7d0f%3A0x7e1b6f14ee1df7e0!2sCarrer%20Montju%C3%AFc%2C%2011%2C%2008293%20Collbat%C3%B3%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1756073970770!5m2!1ses!2ses"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación Versi Sport">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  </main>
+
+  
+
+<!-- ============= FOOTER ============== -->
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+     
+
+      <!-- MENÚ IZQUIERDA -->
+
+      <nav class="footer__nav" aria-label="Enlaces rápidos">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="personalizacion.html">Personalización</a></li>
+          <li><a href="zonaclubs.html">Zona Clubs</a></li>
+          <li><a href="error404.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+
+      <!-- REDES SOCIALES -->
+
+    <div class="footer__center">
+      <div class="footer__brand">
+        <img src="media/logoFooter-Versi.svg" alt="Versi" width="240" height="56" />
+      </div>
+
+      <div class="footer__icons" aria-label="Redes sociales">
+
+        <a href="https://www.instagram.com/versisport/"
+           class="icon-link" aria-label="Instagram"
+           target="_blank" rel="noopener">
+          <img src="media/iconos/icono-instagram.svg" alt="" width="28" height="28" />
+        </a>
+
+        <a href="error404.html" class="icon-link" aria-label="X/Twitter">
+          <img src="media/iconos/icono-x.svg" alt="" width="28" height="28" />
+        </a>
+
+        <a href="error404.html" class="icon-link" aria-label="TikTok">
+          <img src="media/iconos/icono-tiktok.svg" alt="" width="28" height="28" />
+        </a>
+      </div>
+    </div>
+
+
+      <!-- DERECHA DOCUMENTOS LEGALES -->
+
+      <nav class="footer__legal" aria-label="Información legal">
+        <ul>
+          <li><a href="documentos%20legales/Versi_Aviso-Legal.pdf" target="_blank" rel="noopener">Aviso legal</a></li>
+          <li><a href="documentos%20legales/Versi_Politica-Privacidad.pdf" target="_blank" rel="noopener">Política de privacidad</a></li>
+          <li><a href="documentos%20legales/Versi_Politica-Cookies.pdf" target="_blank" rel="noopener">Política de cookies</a></li>
+          <li><a href="documentos%20legales/Versi_Politica-Devoluciones.pdf" target="_blank" rel="noopener">Política de devoluciones</a></li>
+          <li><a href="documentos%20legales/Versi_Envios-Entregas.pdf" target="_blank" rel="noopener">Envíos y entregas</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2025 Versi Sport. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+<!----------------------------------------- MODALES ---------------------------------------------->
+
+
+<!-- ===== MODAL CESTA ===== -->
+
+<div id="cart-overlay" class="cart" aria-hidden="true">
+  <!-- Fondo borroso + oscurecido -->
+  <div class="cart__scrim" data-cart-close></div>
+
+  <!-- Panel lateral -->
+  <aside class="cart__panel" role="dialog" aria-modal="true"
+         aria-labelledby="cart-empty-title" tabindex="-1">
+
+    <!-- Cerrar -->
+    <button class="cart__close" aria-label="Cerrar cesta" title="Cerrar" data-cart-close>
+      <img src="media/iconos/icono-cerrar.svg" alt="" width="22" height="22" />
+    </button>
+
+
+    <!-- ESTADO: CESTA VACÍA -->
+
+    <div class="cart__body cart__body--empty">
+      <p id="cart-empty-title" class="cart__empty-title">
+        No hay productos en tu cesta.
+      </p>
+    </div>
+
+
+    <!-- ESTADO: CESTA LLENA (oculto por defecto) -->
+
+    <div class="cart__body cart__body--full" hidden>
+      <!-- Producto -->
+      <div class="cart__product">
+        <img id="cartProdThumb" class="cart__thumb" src="" alt="">
+        <div class="cart__title-wrap">
+          <h3 id="cartProdTitle" class="cart__title">
+            EQUIPACIÓN ATHLETIC CLUB ESPARREGUERA 25/26
+          </h3>
+        </div>
+      </div>
+
+
+      <!-- Meta: talla, cantidad, nombre, dorsal -->
+
+      <div class="cart__meta">
+        <div class="cart__meta-row">
+          <div class="cart__cell">
+            <span class="cart__label">Talla</span>
+            <span id="cartProdSize" class="cart__pill">M</span>
+          </div>
+
+          <div class="cart__cell cart__qty">
+            <span class="cart__label">Cantidad</span>
+            <div class="qty" aria-label="Selector de cantidad">
+              <button class="qty__btn" type="button" data-qty-minus aria-label="Restar">
+                <img src="media/iconos/icono-menos.svg" alt="">
+              </button>
+              <output id="cartQty" class="qty__value" aria-live="polite">1</output>
+              <button class="qty__btn" type="button" data-qty-plus aria-label="Sumar">
+                <img src="media/iconos/icono-mas.svg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart__meta-row">
+          <div class="cart__cell">
+            <span class="cart__label">Nombre</span>
+            <span id="cartName" class="cart__badge">—</span>
+          </div>
+          <div class="cart__cell">
+            <span class="cart__label">Dorsal</span>
+            <span id="cartNumber" class="cart__badge">—</span>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Total -->
+
+      <div class="cart__total">
+        <span>Total:</span>
+        <strong id="cartTotal">32,90€</strong>
+      </div>
+
+
+      <!-- Acciones -->
+      
+      <div class="cart__actions">
+        <button type="button" class="cta-cart-item cta-cart-item--secondary" data-cart-close>
+          Seguir comprando
+        </button>
+        <button type="button" id="btnCheckout" class="cta-cart-item cta-cart-item--primary">
+          Finalizar compra
+        </button>
+      </div>
+    </div>
+  </aside>
+</div>
+
+
+
+<!-- ===== MODAL USUARIO — INICIAR SESIÓN ===== -->
+
+<div id="user-login" class="user-overlay" aria-hidden="true">
+  <div class="user-card" role="dialog" aria-modal="true" aria-labelledby="user-login-title" tabindex="-1">
+    <button class="user-close" aria-label="Cerrar">
+      <img src="media/iconos/icono-cerrar.svg" alt="" width="22" height="22" />
+    </button>
+
+    <div class="user-tabs" role="tablist">
+      <button class="user-tab is-active" role="tab" aria-selected="true" data-user-to="login">Iniciar sesión</button>
+      <span class="user-tab-divider" aria-hidden="true"></span>
+      <button class="user-tab" role="tab" aria-selected="false" data-user-to="register">Registrarse</button>
+    </div>
+
+    <form id="user-login-form" class="user-form" action="#" onsubmit="return false">
+      <label class="user-field">
+        <span class="user-label">Correo electrónico</span>
+        <input type="email" required />
+      </label>
+
+      <label class="user-field">
+        <span class="user-label">Contraseña</span>
+        <input type="password" required />
+      </label>
+
+      <button type="submit" class="btn-user">Iniciar Sesión</button>
+
+      <div class="user-links">
+        <a href="error404.html">He olvidado mi contraseña</a>
+        <a href="error404.html">Recuperar cuenta</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+<!-- ===== MODAL USUARIO — REGISTRARSE ===== -->
+
+<div id="user-register" class="user-overlay" aria-hidden="true">
+  <div class="user-card" role="dialog" aria-modal="true" aria-labelledby="user-register-title" tabindex="-1">
+    <button class="user-close" aria-label="Cerrar">
+      <img src="media/iconos/icono-cerrar.svg" alt="" width="22" height="22" />
+    </button>
+
+    <div class="user-tabs" role="tablist">
+      <button class="user-tab" role="tab" aria-selected="false" data-user-to="login">Iniciar sesión</button>
+      <span class="user-tab-divider" aria-hidden="true"></span>
+      <button class="user-tab is-active" role="tab" aria-selected="true" data-user-to="register">Registrarse</button>
+    </div>
+
+    <form id="user-register-form" class="user-form" action="#" onsubmit="return false">
+      <label class="user-field">
+        <span class="user-label">Nombre</span>
+        <input type="text" required />
+      </label>
+
+      <label class="user-field">
+        <span class="user-label">Correo electrónico</span>
+        <input type="email" required />
+      </label>
+
+      <label class="user-field">
+        <span class="user-label">Contraseña</span>
+        <input type="password" required />
+      </label>
+
+      <label class="user-field">
+        <span class="user-label">Confirmar contraseña</span>
+        <input type="password" required />
+      </label>
+
+      <button type="submit" class="btn-user">Registrarse</button>
+    </form>
+  </div>
+</div>
+
+
+
+  <!-- ===== MODAL MENSAJE ENVIADO ===== -->
+
+  <div id="modal-enviado" class="modal-overlay" aria-hidden="true">
+    <div
+      class="modal-card"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-enviado-titulo"
+      aria-describedby="modal-enviado-desc"
+      tabindex="-1"
+    >
+      <button type="button" class="modal-close" aria-label="Cerrar">
+        <img src="media/iconos/icono-cerrar.svg" alt="" />
+      </button>
+
+      <img class="modal-icon" src="media/iconos/icono-enviado.svg" alt="" />
+
+      <p id="modal-enviado-titulo" class="modal-title">
+        Mensaje enviado con éxito
+      </p>
+
+      <div id="modal-enviado-desc" class="modal-text">
+        <p>Gracias por tu mensaje.</p>
+        <p>¡Muy pronto nos pondremos en contacto contigo!</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+</html>

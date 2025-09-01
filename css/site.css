@@ -1,0 +1,56 @@
+:root {
+
+
+  /* Colores */
+  
+  --color-base-primario: #FFFFFF;
+  --color-base-secundario: #000000;
+  --color-fondo-primario: #FFFFFF;
+  --color-fondo-secundario: #080808;
+  --color-acento: #FC5000;
+
+
+  /* Tipografía */
+
+  --fuente-principal: 'Poppins', sans-serif;
+
+
+  /* Tamaños de Títulos */
+
+  --h1: 5rem;    /* 80px ≈ 60pt - Banner/404 */
+  --h2: 4.5rem;  /* 72px ≈ 54pt - Claims */
+  --h3: 3.5rem;  /* 56px ≈ 42pt - Secciones */
+  --h4: 3rem;    /* 48px ≈ 36pt - Fases/Subt. 404 */
+  --h5: 2.5rem;  /* 40px ≈ 30pt - Subtítulos */
+  --h6: 2.25rem; /* 36px ≈ 27pt - Bloques Home/Titulo Item */
+
+
+  /* Tamaños de Texto */
+
+  --texto-grande: 1.5rem;   /* 24px ≈ 18pt - Intros/Modales */
+  --texto-estandar: 1rem;   /* 16px ≈ 12pt - Body */
+  --texto-pequeno: 0.875rem;/* 14px ≈ 10.5pt - Secundario */
+  --texto-cta: 1rem;        /* 16px ≈ 12pt - Botones/CTA */
+  --texto-nav: 1rem;        /* 16px ≈ 12pt - Menú */
+  --texto-footer: 1rem;     /* 16px ≈ 12pt - Footer */
+
+
+  /* Pesos tipográficos */
+
+  --peso-regular: 400;
+  --peso-medium: 500;
+  --peso-semibold: 600;
+
+
+  /* Fondos Imputs y png */
+
+  --gris-input: #E7E7E7;
+
+
+  /* Banners iniciales */
+  --header-h: 72px; /* ajusta a la altura real de tu header fijo */
+}
+
+
+}
+

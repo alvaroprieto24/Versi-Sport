@@ -1,0 +1,513 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Álvaro Prieto — Proyecto Integrado 2º Gráfica Interactiva" />
+  <meta name="description" content="Versi Web" />
+  <title>Versi — Equipación Athletic Club Esparreguera</title>
+
+  
+  <!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="media/favicon.svg">
+
+
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/mediaqueries.css" />
+  <script src="js/script.js" defer></script>
+
+
+</head>
+<body>
+
+  <!-- Overlay menú móvil -->
+  <div id="overlay" class="overlay" hidden></div>
+
+
+  <!-- ===== HEADER / NAV ===== -->
+
+  <header class="site-header" role="banner">
+    <div class="container header__bar">
+      <!-- Logo -->
+      <a href="index.html" class="logo-link" aria-label="Versi">
+        <img src="media/logoNav-Versi.svg" alt="Versi" class="logo-img" width="120" height="28" />
+      </a>
+
+
+      <!-- Nav desktop -->
+
+      <nav class="nav-desktop" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="personalizacion.html">Personalización</a></li>
+          <li><a href="zonaclubs.html">Zona Clubs</a></li>
+          <li><a href="error404.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+
+      <!-- Acciones -->
+
+      <div class="header__actions">
+        <a href="#" class="icon-link" aria-label="Mi cuenta" data-user-open aria-controls="user-login">
+        <img src="media/iconos/icono-usuario.svg" alt="" width="22" height="22" />
+        </a>
+
+
+        <!-- Activador del modal de cesta -->
+
+        <a href="#"
+           class="icon-link cart-trigger"
+           aria-label="Cesta"
+           aria-controls="cart-overlay"
+           data-cart-open>
+          <img src="media/iconos/icono-cesta.svg" alt="" width="22" height="22" />
+        </a>
+
+        <button class="icon-link btn-menu" id="btnMenuOpen"
+                aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menú">
+          <img src="media/iconos/icono-menu.svg" alt="" width="22" height="22" />
+        </button>
+      </div>
+    </div>
+    
+
+    <!-- Off-canvas móvil/tablet -->
+
+    <aside id="menu-mobile" class="menu-mobile" role="dialog" aria-modal="true" aria-label="Menú">
+      <div class="menu-mobile__head">
+        <a href="index.html" class="logo-link" aria-label="Versi">
+          <img src="media/logoNav-Versi.svg" alt="Versi" width="112" height="26" />
+        </a>
+        <button class="icon-link" id="btnMenuClose" aria-label="Cerrar menú">
+          <img src="media/iconos/icono-cerrar.svg" alt="" width="22" height="22" />
+        </button>
+      </div>
+
+      <nav class="menu-mobile__nav" aria-label="Navegación móvil">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="personalizacion.html">Personalización</a></li>
+          <li><a href="zonaclubs.html">Zona Clubs</a></li>
+          <li><a href="error404.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-mobile__extras">
+        <div class="menu-mobile__social" aria-label="Redes sociales">
+          <a href="#" class="icon-link" aria-label="Instagram">
+            <img src="media/iconos/icono-instagram.svg" alt="" width="24" height="24" />
+          </a>
+          <a href="#" class="icon-link" aria-label="X/Twitter">
+            <img src="media/iconos/icono-x.svg" alt="" width="24" height="24" />
+          </a>
+          <a href="#" class="icon-link" aria-label="TikTok">
+            <img src="media/iconos/icono-tiktok.svg" alt="" width="24" height="24" />
+          </a>
+        </div>
+      </div>
+    </aside>
+  </header>
+
+
+
+  <!-- ================== CONTENIDO ================= -->
+
+  <!-- PAGINA ITEM -->
+
+  <main id="main-content" tabindex="-1">
+
+
+<!-- ========== FICHA DE PRODUCTO ========== -->
+
+<section class="item">
+  <div class="container">
+    <div class="item__grid">
+
+
+      <!-- Col 1: miniaturas -->
+
+      <aside class="item__thumbs" aria-label="Otras vistas">
+        <button class="thumb is-active" type="button"
+                aria-label="Vista frontal verde seleccionada"
+                data-src="media/greenkit-front.png">
+          <img src="media/greenkit-front.png" alt="Frontal camiseta verde">
+        </button>
+
+        <button class="thumb" type="button" aria-label="Vista trasera verde"
+                data-src="media/greenkit-back.png">
+          <img src="media/greenkit-back.png" alt="Trasera camiseta verde">
+        </button>
+
+        <button class="thumb" type="button" aria-label="Vista frontal negra"
+                data-src="media/blackkit-front.png">
+          <img src="media/blackkit-front.png" alt="Frontal camiseta negra">
+        </button>
+
+        <button class="thumb" type="button" aria-label="Vista trasera negra"
+                data-src="media/blackkit-back.png">
+          <img src="media/blackkit-back.png" alt="Trasera camiseta negra">
+        </button>
+      </aside>
+
+
+      <!-- Col 2: imagen principal -->
+
+      <figure class="item__viewer">
+        <img id="item-main-img" src="media/greenkit-front.png" alt="Camiseta — vista principal">
+      </figure>
+
+
+      <!-- Col 3: información del item -->
+
+      <article class="item__info">
+        <h1 class="item__title">
+          EQUIPACIÓN ATHLETIC CLUB ESPARREGUERA 25/26
+        </h1>
+
+        <p class="item__desc">
+          Camiseta Reversible Athletic Club Esparreguera Authentic Versi Dri-FIT
+        </p>
+
+        <p class="item__price">32,90€</p>
+
+
+        <!-- Tallas -->
+
+        <fieldset class="item__sizes">
+          <legend>Selecciona tu talla</legend>
+
+          <label>
+            <input class="size-input" type="radio" name="size" value="S">
+            <span class="size-btn">S</span>
+          </label>
+
+          <label>
+            <input class="size-input" type="radio" name="size" value="M" checked>
+            <span class="size-btn">M</span>
+          </label>
+
+          <label>
+            <input class="size-input" type="radio" name="size" value="L">
+            <span class="size-btn">L</span>
+          </label>
+
+          <label>
+            <input class="size-input" type="radio" name="size" value="XL">
+            <span class="size-btn">XL</span>
+          </label>
+
+          <label>
+            <input class="size-input" type="radio" name="size" value="XXL">
+            <span class="size-btn">XXL</span>
+          </label>
+        </fieldset>
+
+
+        <!-- Form nombre/dorsal -->
+
+        <form class="item__form" action="#" onsubmit="return false">
+          <div class="field">
+            <label for="item-name">Nombre</label>
+            <input id="item-name" type="text" maxlength="12" required>
+          </div>
+
+          <div class="field">
+            <label for="item-number">Dorsal</label>
+            <input id="item-number" type="text" inputmode="numeric" maxlength="2" required>
+          </div>
+        </form>
+
+
+        <!-- CTA -->
+
+        <div class="item__cta">
+          <button type="button" class="btn-item-cta">Añadir a la cesta</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  
+
+  <!-- ============= FOOTER ============== -->
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+     
+
+      <!-- MENÚ IZQUIERDA -->
+
+      <nav class="footer__nav" aria-label="Enlaces rápidos">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="personalizacion.html">Personalización</a></li>
+          <li><a href="zonaclubs.html">Zona Clubs</a></li>
+          <li><a href="error404.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+
+      <!-- REDES SOCIALES -->
+
+    <div class="footer__center">
+      <div class="footer__brand">
+        <img src="media/logoFooter-Versi.svg" alt="Versi" width="240" height="56" />
+      </div>
+
+      <div class="footer__icons" aria-label="Redes sociales">
+
+        <a href="https://www.instagram.com/versisport/"
+           class="icon-link" aria-label="Instagram"
+           target="_blank" rel="noopener">
+          <img src="media/iconos/icono-instagram.svg" alt="" width="28" height="28" />
+        </a>
+
+        <a href="error404.html" class="icon-link" aria-label="X/Twitter">
+          <img src="media/iconos/icono-x.svg" alt="" width="28" height="28" />
+        </a>
+
+        <a href="error404.html" class="icon-link" aria-label="TikTok">
+          <img src="media/iconos/icono-tiktok.svg" alt="" width="28" height="28" />
+        </a>
+      </div>
+    </div>
+
+
+      <!-- DERECHA DOCUMENTOS LEGALES -->
+
+      <nav class="footer__legal" aria-label="Información legal">
+        <ul>
+          <li><a href="documentos%20legales/Versi_Aviso-Legal.pdf" target="_blank" rel="noopener">Aviso legal</a></li>
+          <li><a href="documentos%20legales/Versi_Politica-Privacidad.pdf" target="_blank" rel="noopener">Política de privacidad</a></li>
+          <li><a href="documentos%20legales/Versi_Politica-Cookies.pdf" target="_blank" rel="noopener">Política de cookies</a></li>
+          <li><a href="documentos%20legales/Versi_Politica-Devoluciones.pdf" target="_blank" rel="noopener">Política de devoluciones</a></li>
+          <li><a href="documentos%20legales/Versi_Envios-Entregas.pdf" target="_blank" rel="noopener">Envíos y entregas</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2025 Versi Sport. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+<!----------------------------------------- MODALES ---------------------------------------------->
+
+
+<!-- ===== MODAL CESTA ===== -->
+
+<div id="cart-overlay" class="cart" aria-hidden="true">
+  <!-- Fondo borroso + oscurecido -->
+  <div class="cart__scrim" data-cart-close></div>
+
+  <!-- Panel lateral -->
+  <aside class="cart__panel" role="dialog" aria-modal="true"
+         aria-labelledby="cart-empty-title" tabindex="-1">
+
+    <!-- Cerrar -->
+    <button class="cart__close" aria-label="Cerrar cesta" title="Cerrar" data-cart-close>
+      <img src="media/iconos/icono-cerrar.svg" alt="" width="22" height="22" />
+    </button>
+
+
+    <!-- ESTADO: CESTA VACÍA -->
+
+    <div class="cart__body cart__body--empty">
+      <p id="cart-empty-title" class="cart__empty-title">
+        No hay productos en tu cesta.
+      </p>
+    </div>
+
+
+    <!-- ESTADO: CESTA LLENA (oculto por defecto) -->
+
+    <div class="cart__body cart__body--full" hidden>
+      <!-- Producto -->
+      <div class="cart__product">
+        <img id="cartProdThumb" class="cart__thumb" src="" alt="">
+        <div class="cart__title-wrap">
+          <h3 id="cartProdTitle" class="cart__title">
+            EQUIPACIÓN ATHLETIC CLUB ESPARREGUERA 25/26
+          </h3>
+        </div>
+      </div>
+
+
+      <!-- Meta: talla, cantidad, nombre, dorsal -->
+
+      <div class="cart__meta">
+        <div class="cart__meta-row">
+          <div class="cart__cell">
+            <span class="cart__label">Talla</span>
+            <span id="cartProdSize" class="cart__pill">M</span>
+          </div>
+
+          <div class="cart__cell cart__qty">
+            <span class="cart__label">Cantidad</span>
+            <div class="qty" aria-label="Selector de cantidad">
+              <button class="qty__btn" type="button" data-qty-minus aria-label="Restar">
+                <img src="media/iconos/icono-menos.svg" alt="">
+              </button>
+              <output id="cartQty" class="qty__value" aria-live="polite">1</output>
+              <button class="qty__btn" type="button" data-qty-plus aria-label="Sumar">
+                <img src="media/iconos/icono-mas.svg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart__meta-row">
+          <div class="cart__cell">
+            <span class="cart__label">Nombre</span>
+            <span id="cartName" class="cart__badge">—</span>
+          </div>
+          <div class="cart__cell">
+            <span class="cart__label">Dorsal</span>
+            <span id="cartNumber" class="cart__badge">—</span>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Total -->
+
+      <div class="cart__total">
+        <span>Total:</span>
+        <strong id="cartTotal">32,90€</strong>
+      </div>
+
+
+      <!-- Acciones -->
+
+      <div class="cart__actions">
+        <button type="button" class="cta-cart-item cta-cart-item--secondary" data-cart-close>
+          Seguir comprando
+        </button>
+        <button type="button" id="btnCheckout" class="cta-cart-item cta-cart-item--primary">
+          Finalizar compra
+        </button>
+      </div>
+    </div>
+  </aside>
+</div>
+
+
+
+<!-- ===== MODAL PEDIDO CONFIRMADO ===== -->
+
+<div id="modal-pedido" class="modal-overlay" aria-hidden="true">
+  <div class="modal-card"
+       role="dialog" aria-modal="true"
+       aria-labelledby="pedido-titulo" aria-describedby="pedido-desc"
+       tabindex="-1">
+    <button type="button" class="modal-close" aria-label="Cerrar">
+      <img src="media/iconos/icono-cerrar.svg" alt="" width="22" height="22" />
+    </button>
+
+    <img class="modal-icon" src="media/iconos/icono-enviado.svg" alt="" width="64" height="64" />
+
+    <p id="pedido-titulo" class="modal-title">¡Pedido confirmado!</p>
+
+    <div id="pedido-desc" class="modal-text">
+      <p>Gracias por tu compra. En breves recibirás un correo con la información de tu pedido.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ===== MODAL USUARIO — INICIAR SESIÓN ===== -->
+
+<div id="user-login" class="user-overlay" aria-hidden="true">
+  <div class="user-card" role="dialog" aria-modal="true" aria-labelledby="user-login-title" tabindex="-1">
+    <button class="user-close" aria-label="Cerrar">
+      <img src="media/iconos/icono-cerrar.svg" alt="" width="22" height="22" />
+    </button>
+
+    <div class="user-tabs" role="tablist">
+      <button class="user-tab is-active" role="tab" aria-selected="true" data-user-to="login">Iniciar sesión</button>
+      <span class="user-tab-divider" aria-hidden="true"></span>
+      <button class="user-tab" role="tab" aria-selected="false" data-user-to="register">Registrarse</button>
+    </div>
+
+    <form id="user-login-form" class="user-form" action="#" onsubmit="return false">
+      <label class="user-field">
+        <span class="user-label">Correo electrónico</span>
+        <input type="email" required />
+      </label>
+
+      <label class="user-field">
+        <span class="user-label">Contraseña</span>
+        <input type="password" required />
+      </label>
+
+      <button type="submit" class="btn-user">Iniciar Sesión</button>
+
+      <div class="user-links">
+        <a href="error404.html">He olvidado mi contraseña</a>
+        <a href="error404.html">Recuperar cuenta</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+<!-- ===== MODAL USUARIO — REGISTRARSE ===== -->
+
+<div id="user-register" class="user-overlay" aria-hidden="true">
+  <div class="user-card" role="dialog" aria-modal="true" aria-labelledby="user-register-title" tabindex="-1">
+    <button class="user-close" aria-label="Cerrar">
+      <img src="media/iconos/icono-cerrar.svg" alt="" width="22" height="22" />
+    </button>
+
+    <div class="user-tabs" role="tablist">
+      <button class="user-tab" role="tab" aria-selected="false" data-user-to="login">Iniciar sesión</button>
+      <span class="user-tab-divider" aria-hidden="true"></span>
+      <button class="user-tab is-active" role="tab" aria-selected="true" data-user-to="register">Registrarse</button>
+    </div>
+
+    <form id="user-register-form" class="user-form" action="#" onsubmit="return false">
+      <label class="user-field">
+        <span class="user-label">Nombre</span>
+        <input type="text" required />
+      </label>
+
+      <label class="user-field">
+        <span class="user-label">Correo electrónico</span>
+        <input type="email" required />
+      </label>
+
+      <label class="user-field">
+        <span class="user-label">Contraseña</span>
+        <input type="password" required />
+      </label>
+
+      <label class="user-field">
+        <span class="user-label">Confirmar contraseña</span>
+        <input type="password" required />
+      </label>
+
+      <button type="submit" class="btn-user">Registrarse</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
